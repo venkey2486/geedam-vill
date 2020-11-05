@@ -16,7 +16,7 @@ const prodctSchema = new mongoose.Schema({
   image: { type: String, required: true },
   brand: { type: String, required: true },
   price: { type: Number, default: 0, required: true },
-  category: { type: String, required: true },
+  category: { type: String, required: true, default:"Pants" },
   countInStock: { type: Number, default: 0, required: true },
   description: { type: String, required: true },
   rating: { type: Number, default: 0, required: true },
