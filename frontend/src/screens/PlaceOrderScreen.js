@@ -51,7 +51,7 @@ function PlaceOrderScreen(props) {
           </h3>
           <div>
             {cart.shipping.address}, {cart.shipping.city},
-          {cart.shipping.postalCode}, {cart.shipping.country},
+          {cart.shipping.postalCode},{cart.shipping.mobile}, {cart.shipping.country}
           </div>
         </div>
         <div>

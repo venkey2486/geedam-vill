@@ -3,7 +3,8 @@ const shippingSchema = {
   address: { type: String, required: true },
   city: { type: String, required: true },
   postalCode: { type: String, required: true },
-  country: { type: String, required: true },
+  mobile: { type: Number,required:true},
+  country: { type: String,required:true,default: "india"}
 };
 
 const paymentSchema = {

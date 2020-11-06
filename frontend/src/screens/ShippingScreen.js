@@ -9,13 +9,14 @@ function ShippingScreen(props) {
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
   const [postalCode, setPostalCode] = useState('');
+  const [mobile,setMobile]=useState('');
   const [country, setCountry] = useState('');
 
   const dispatch = useDispatch();
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(saveShipping({ address, city, postalCode, country }));
+    dispatch(saveShipping({ address, city, postalCode,mobile, country }));
     props.history.push('payment');
   }
   return <div>
@@ -48,25 +49,25 @@ function ShippingScreen(props) {
             <input type="text" name="postalCode" id="postalCode" onChange={(e) => setPostalCode(e.target.value)}>
             </input>
           </li>
+
+          <li>
+            <label htmlFor="postalCode">
+              Mobile Number
+          </label>
+            <input type="text" name="mobile" id="mobile" onChange={(e) => setMobile(e.target.value)}>
+            </input>
+          </li>
+
           <li>
             <label htmlFor="country">
               Country
           </label>
 
 
-         {/*<input type="text" name="country" id="country" onChange={(e) => setCountry(e.target.value)}>
-            </input>*/}
+         <input type="text" name="country" id="country" onChange={(e) => setCountry(e.target.value)}>
+            </input>
 
-                  <select
-                    onChange={(e) => {
-                      setCountry(e.target.value);
-                    }}
-                  >
-                      <option value="india">india</option>
-                      <option value="shrilanka">shrilanka</option>
-                      <option value="Nepal">Nepal</option>
-                      
-                  </select>
+                 
           </li>
 
 
