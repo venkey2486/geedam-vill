@@ -34,7 +34,7 @@ function App() {
         <header className="header">
           <div className="brand">
             <button onClick={openMenu}>&#9776;</button>
-            <Link to="/">myg.com</Link>
+            <Link to="/">Geedam.com</Link>
           </div>
           <div className="header-links">
           
